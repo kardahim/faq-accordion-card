@@ -49,10 +49,14 @@ body {
     position: relative;
 }
 
-.image-holder img {
+.image-holder .box {
     position: absolute;
     left: -110px;
     top: 235px;
+}
+
+.image-holder .mobile {
+    display: none;
 }
 
 .faq {
@@ -97,6 +101,47 @@ body {
     text-align: center;
   }
 
-  .attribution a {
+.attribution a {
     color: hsl(228, 45%, 44%);
-  }
+}
+
+@media screen and (max-width: 1023px) {
+    .card {
+        flex-direction: column;
+        height: 600px;
+        width: 450px;
+        background: url("/images/bg-pattern-mobile.svg") no-repeat;
+        background-color: white;
+        background-position: top;  
+    }
+    
+    .image-holder {
+        background: none;
+        width: 100%;
+        height: 80px;
+        background-position: 0 0;
+        position: relative;
+        margin-bottom: 50px;
+    }
+    
+    .image-holder .box {
+        display: none;
+    }
+
+    .image-holder .mobile {
+        position: absolute;
+        display: block;
+        top: -110px;
+        left: 80px;
+    }
+
+    .faq {
+        width: 100%;
+        padding: 50px;
+    }
+
+    .faq h1 {
+        text-align: center;
+    }
+    
+}
